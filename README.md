@@ -21,10 +21,10 @@ InitializationFile.sql - файл инициализации схемы данн
 
 Рабочая зона (src/main/java/org.example) содержит 5 java каталогов:
 
-controller - 4 классов контроллеров;
-dto - набор объектов, передающих данные;
-entity - модели объектов Users, Event, Organizer и Reservation;
-repository - репозитории к моделям;
-service - имплементация репозиториев.
+- controller - 4 классов контроллеров;
+- dto - набор объектов, передающих данные;
+- entity - модели объектов Users, Event, Organizer и Reservation;
+- repository - репозитории к моделям;
+- service - имплементация репозиториев.
 
 В папке Postman находятся файлы коллекции.
