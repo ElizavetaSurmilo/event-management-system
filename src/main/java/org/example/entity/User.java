@@ -9,9 +9,11 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Users {
+@Table(name = "user", schema = "event_manager_schema")
+public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq")
+    @SequenceGenerator(name = "user_id_seq", schema = "event_manager_schema", allocationSize = 1 )
     private Integer id;
     @Column(name = "first_name")
     private String firstName;

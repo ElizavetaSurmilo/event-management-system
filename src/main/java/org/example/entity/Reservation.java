@@ -14,9 +14,11 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "reservation", schema = "event_manager_schema")
 public class Reservation {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "reservation_id_seq")
+    @SequenceGenerator(name = "reservation_id_seq", schema = "event_manager_schema", allocationSize = 1 )
     private Integer id;
     @CreationTimestamp
     private Date reserved_at;
@@ -27,7 +29,7 @@ public class Reservation {
     private String status;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private Users user;
+    private User user;
     @ManyToOne
     @JoinColumn(name = "event_id")
     private Event event;

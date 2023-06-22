@@ -2,7 +2,7 @@ package org.example.controller;
 
 import lombok.AllArgsConstructor;
 import org.example.dto.UserDTO;
-import org.example.entity.Users;
+import org.example.entity.User;
 import org.example.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,17 +18,17 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public ResponseEntity<Users> create(@RequestBody UserDTO dto) {
-        return new ResponseEntity<>(userService.create(dto), HttpStatus.OK);
+    public ResponseEntity<User> create(@RequestBody UserDTO dto) {
+        return new ResponseEntity<>(userService.create(dto), HttpStatus.CREATED);
     }
 
     @GetMapping
-    public ResponseEntity<List<Users>> readAll() {
+    public ResponseEntity<List<User>> readAll() {
         return new ResponseEntity<>(userService.readAll(), HttpStatus.OK);
     }
 
     @PutMapping
-    public ResponseEntity<Users> update(@RequestBody Users user) {
+    public ResponseEntity<User> update(@RequestBody User user) {
         return new ResponseEntity<>(userService.update(user), HttpStatus.OK);
     }
 
@@ -39,7 +39,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Users> readById(@PathVariable Integer id) {
+    public ResponseEntity<User> readById(@PathVariable Integer id) {
         return new ResponseEntity<>(userService.readById(id), HttpStatus.OK);
     }
 }

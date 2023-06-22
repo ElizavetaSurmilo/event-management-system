@@ -19,7 +19,7 @@ public class OrganizerController {
 
     @PostMapping
     public ResponseEntity<Organizer> create(@RequestBody OrganizerDTO dto) {
-        return new ResponseEntity<>(organizerService.create(dto), HttpStatus.OK);
+        return new ResponseEntity<>(organizerService.create(dto), HttpStatus.CREATED);
     }
 
     @GetMapping

@@ -19,7 +19,7 @@ public class ReservationController {
 
     @PostMapping
     public ResponseEntity<Reservation> create(@RequestBody ReservationDTO dto) {
-        return new ResponseEntity<>(reservationService.create(dto), HttpStatus.OK);
+        return new ResponseEntity<>(reservationService.create(dto), HttpStatus.CREATED);
     }
 
     @GetMapping

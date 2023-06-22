@@ -3,7 +3,8 @@
 		"_postman_id": "c1642946-ddd3-47ae-8b71-f3715be576ea",
 		"name": "Reservation",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "18402356"
+		"_exporter_id": "18402356",
+		"_collection_link": "https://www.postman.com/supply-administrator-6366135/workspace/event-management-system/collection/18402356-c1642946-ddd3-47ae-8b71-f3715be576ea?action=share&creator=18402356&source=collection_link"
 	},
 	"item": [
 		{
@@ -13,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"ticketCount\": 2,\r\n    \"status\": \"Active\",\r\n    \"userId\": 1,\r\n    \"eventId\": 3\r\n}\r\n",
+					"raw": "{\r\n    \"ticketCount\": 2,\r\n    \"status\": \"Active\",\r\n    \"userId\": 1,\r\n    \"eventId\": 1\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -84,14 +85,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/reservations/4",
+					"raw": "localhost:8081/reservations/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
 						"reservations",
-						"4"
+						"1"
 					]
 				}
 			},
@@ -103,14 +104,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/reservations/",
+					"raw": "localhost:8081/reservations/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
 						"reservations",
-						""
+						"1"
 					]
 				}
 			},

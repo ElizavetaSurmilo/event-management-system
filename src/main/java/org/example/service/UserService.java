@@ -2,7 +2,7 @@ package org.example.service;
 
 import lombok.AllArgsConstructor;
 import org.example.dto.UserDTO;
-import org.example.entity.Users;
+import org.example.entity.User;
 import org.example.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +14,8 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    public Users create(UserDTO dto) {
-        Users user = Users.builder()
+    public User create(UserDTO dto) {
+        User user = User.builder()
                 .firstName(dto.getFirstName())
                 .lastName(dto.getLastName())
                 .email(dto.getEmail())
@@ -25,11 +25,11 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public List<Users> readAll() {
+    public List<User> readAll() {
         return userRepository.findAll();
     }
 
-    public Users update(Users user) {
+    public User update(User user) {
         return userRepository.save(user);
     }
 
@@ -37,7 +37,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public Users readById(Integer id) {
+    public User readById(Integer id) {
         return userRepository.findById(id).orElseThrow(() ->
                 new RuntimeException("User not found - " + id));
     }

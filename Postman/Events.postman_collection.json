@@ -3,7 +3,8 @@
 		"_postman_id": "c9b7852f-ca68-4915-a302-43bd8be003d0",
 		"name": "Events",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "18402356"
+		"_exporter_id": "18402356",
+		"_collection_link": "https://www.postman.com/supply-administrator-6366135/workspace/event-management-system/collection/18402356-c9b7852f-ca68-4915-a302-43bd8be003d0?action=share&creator=18402356&source=collection_link"
 	},
 	"item": [
 		{
@@ -58,7 +59,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Part1\",\r\n    \"description\": \"Some text 2\",\r\n    \"dateTime\": \"2023-12-31T22:00:00\",\r\n    \"location\": \"Street 55\",\r\n    \"ticketPrice\": 39.99,\r\n    \"organizer\": {\r\n        \"id\": 2,\r\n        \"name\": \"Company1\",\r\n        \"email\": \"company1@gmail.com\",\r\n        \"phone\": \"+375291114433\",\r\n        \"address\": \"Street 1\",\r\n        \"description\": \"Some text about the company1\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Part2\",\r\n    \"description\": \"Some text 2\",\r\n    \"dateTime\": \"2023-12-31T22:00:00\",\r\n    \"location\": \"Street 55\",\r\n    \"ticketPrice\": 39.99,\r\n    \"organizer\": {\r\n        \"id\": 2,\r\n        \"name\": \"Company1\",\r\n        \"email\": \"company1@gmail.com\",\r\n        \"phone\": \"+375291114433\",\r\n        \"address\": \"Street 1\",\r\n        \"description\": \"Some text about the company1\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -84,14 +85,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/events/3",
+					"raw": "localhost:8081/events/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
 						"events",
-						"3"
+						"1"
 					]
 				}
 			},
@@ -103,14 +104,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/events/",
+					"raw": "localhost:8081/events/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
 						"events",
-						""
+						"1"
 					]
 				}
 			},

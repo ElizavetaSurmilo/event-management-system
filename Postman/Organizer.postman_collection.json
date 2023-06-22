@@ -3,7 +3,8 @@
 		"_postman_id": "7e251d59-6361-4cf5-a2a1-763169e81982",
 		"name": "Organizer",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "18402356"
+		"_exporter_id": "18402356",
+		"_collection_link": "https://www.postman.com/supply-administrator-6366135/workspace/event-management-system/collection/18402356-7e251d59-6361-4cf5-a2a1-763169e81982?action=share&creator=18402356&source=collection_link"
 	},
 	"item": [
 		{
@@ -58,7 +59,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Company2\",\r\n    \"email\": \"company2@gmail.com\",\r\n    \"phone\": \"+375291114433\",\r\n    \"address\": \"Street 23\",\r\n    \"description\": \"Some text about the company2\"\r\n}",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Company2\",\r\n    \"email\": \"company2@gmail.com\",\r\n    \"phone\": \"+375291114433\",\r\n    \"address\": \"Street 23\",\r\n    \"description\": \"Some text about the company2\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -84,14 +85,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/organizers/2",
+					"raw": "localhost:8081/organizers/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
 						"organizers",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -103,14 +104,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8081/organizers/6",
+					"raw": "localhost:8081/organizers/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8081",
 					"path": [
 						"organizers",
-						"6"
+						"1"
 					]
 				}
 			},
