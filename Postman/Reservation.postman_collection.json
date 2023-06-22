@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "c1642946-ddd3-47ae-8b71-f3715be576ea",
+		"name": "Reservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18402356"
+	},
+	"item": [
+		{
+			"name": "create reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ticketCount\": 2,\r\n    \"status\": \"Active\",\r\n    \"userId\": 1,\r\n    \"eventId\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/reservations",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readAll reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/reservations",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update reservation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"reserved_at\": \"2023-06-22T16:58:47.206+00:00\",\r\n    \"ticketCount\": 2,\r\n    \"totalPrice\": 51.98,\r\n    \"status\": \"Completed\",\r\n    \"user\": {\r\n        \"id\": 1,\r\n        \"firstName\": \"Kira\",\r\n        \"lastName\": \"Moon\",\r\n        \"email\": \"moonK@gmail.com\",\r\n        \"password\": \"00000\",\r\n        \"phone\": \"+375291782345\"\r\n    },\r\n    \"event\": {\r\n        \"id\": 3,\r\n        \"name\": \"Part1\",\r\n        \"description\": \"Some text 1\",\r\n        \"dateTime\": \"2023-12-31T22:00:00\",\r\n        \"location\": \"Street 33\",\r\n        \"ticketPrice\": 25.99,\r\n        \"organizer\": {\r\n            \"id\": 2,\r\n            \"name\": \"Company1\",\r\n            \"email\": \"company1@gmail.com\",\r\n            \"phone\": \"+375291114433\",\r\n            \"address\": \"Street 1\",\r\n            \"description\": \"Some text about the company1\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/reservations",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete reservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/reservations/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reservations",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readById reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/reservations/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reservations",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

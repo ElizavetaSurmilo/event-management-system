@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "7e251d59-6361-4cf5-a2a1-763169e81982",
+		"name": "Organizer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18402356"
+	},
+	"item": [
+		{
+			"name": "create organizer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Company1\",\r\n    \"email\": \"company1@gmail.com\",\r\n    \"phone\": \"+375291114433\",\r\n    \"address\": \"Street 1\",\r\n    \"description\": \"Some text about the company1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/organizers",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"organizers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readAll organizers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/organizers",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"organizers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update organizer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Company2\",\r\n    \"email\": \"company2@gmail.com\",\r\n    \"phone\": \"+375291114433\",\r\n    \"address\": \"Street 23\",\r\n    \"description\": \"Some text about the company2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/organizers",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"organizers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete organizer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/organizers/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"organizers",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readById organizer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/organizers/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"organizers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
